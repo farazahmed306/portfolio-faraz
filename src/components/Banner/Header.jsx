@@ -6,12 +6,13 @@ const Header = () => {
   const [bar, setBar] = useState(false);
   return (
     <Container bar={bar}>
-      <Logo>
+      <Logo onClick={()=>{console.log("Heoo")}}>
         <span className="green">
           <GiCandleFlame />
         </span>
         <h1>Portfolio</h1>
       </Logo>
+      
       <Nav bar={bar}>
         <span>
           <a href="#home">Home</a>
