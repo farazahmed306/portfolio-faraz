@@ -1,34 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import {IoIosQuote} from "react-icons/io";
-import {AiOutlineStar} from "react-icons/ai";
+import { IoIosQuote } from "react-icons/io";
+import { AiOutlineStar } from "react-icons/ai";
 
 const ClientSlider = (props) => {
-    const {name, position, img_url, stars, disc} = props.item;
-  return (
-    <Container>
-        <Header>
-            <span className='quote'><IoIosQuote/></span>
-            <div>
-                {Array(stars).fill().map((_, i) => (
-                    <span className='star' key={i}>
-                        <AiOutlineStar/>
-                    </span>
-                ))}
-            </div>
-        </Header>
-        <Body>
-            {disc}
-        </Body>
-        <Footer>
-            <img src={img_url} alt={name} />
-            <div className="details">
-                <h1>{name}</h1>
-                <p>{position}</p>
-            </div>
-        </Footer>
-    </Container>
-  )
+    const { name, img_url, stars, disc } = props.item;
+    return (
+        <Container>
+            <Header>
+                <span className='quote'><IoIosQuote /></span>
+                <div>
+                    {Array(stars).fill().map((_, i) => (
+                        <span className='star' key={i}>
+                            <AiOutlineStar />
+                        </span>
+                    ))}
+                </div>
+            </Header>
+            <ClientDetails>
+                <img src={img_url} alt={name} />
+                <div className="details">
+                    <h1>{name}</h1>
+                </div>
+            </ClientDetails>
+            <Quote>
+                {disc}
+            </Quote>
+
+        </Container>
+    )
 }
 
 export default ClientSlider
@@ -37,6 +37,7 @@ const Container = styled.div`
     background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
     padding: 1.5rem 1rem;
     margin: 0 1rem;
+    min-height : 30vh
 `
 
 const Header = styled.div`
@@ -54,11 +55,11 @@ const Header = styled.div`
         font-size: 1.3rem;
     }
 `
-const Body = styled.p`
+const Quote = styled.p`
     font-size: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 `
-const Footer = styled.div`
+const ClientDetails = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;

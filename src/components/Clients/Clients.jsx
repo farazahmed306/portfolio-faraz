@@ -7,37 +7,26 @@ import { Slide } from 'react-awesome-reveal';
 
 let clients = [
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 3,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        name: "Ashwag Alasmari",
+        img_url: "https://al-burraq.com/assets/img/reviews/3.png",
+        stars: 5,
+        disc: ` He went above and beyond expectations, showing great responsiveness and being easy to reach at any time. Working with him was seamless, and I’d gladly collaborate with him again. Highly recommend him to colleagues and friends.
+`
     },
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 4,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        name: "Glen Lerner",
+        img_url: "https://cdn.prod.website-files.com/6446f5d7c0c9e029b3ca5c2e/645ba59c4b09a0046b1d2665_Glen%20Lerner%20crop.jpg",
+        stars: 5,
+        disc: `"I must share my amazing experience with this attorney referral platform! It's user-centric, connects you with skilled professionals, and fosters effortless interactions. My search for legal expertise has never been easier. Love it!"`
     },
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        name: "Josh",
+        img_url: "https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113_1280.png",
+        stars: 5,
+        disc: `He has been a true pleasure to deal with. There was never a day or night that I could recall when he wasn't available, and any changes were implemented instantly.I would confidently work with him again and highly recommend him – Excellent`
     },
-    {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
-    },
+
+
 ]
 var settings = {
     dots: true,
@@ -46,61 +35,62 @@ var settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows : false,
+    arrows: false,
     responsive: [
-      {
-        breakpoint: 990,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
+        {
+            breakpoint: 990,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 530,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
         }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 530,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]}
+    ]
+}
 
 const Clients = () => {
     const arrowRef = useRef(null);
     let clientDisc = "";
     clientDisc = clients.map((item, i) => (
-        <ClientSlider item={item} key={i}/>
+        <ClientSlider item={item} key={i} />
     ))
-  return (
-    <Container id='client'>
-        <Slide direction="left">
-            <span className="green">testimonials</span>
-            <h1>what clients say</h1>
-        </Slide>
-        <Testimonials>
-            <Slider ref={arrowRef} {...settings}>
-                {clientDisc}
-            </Slider>
-            <Buttons>
-                <button
-                onClick={() => arrowRef.current.slickPrev()}
-                ><IoIosArrowBack/></button>
-                <button
-                onClick={() => arrowRef.current.slickNext()}
-                ><IoIosArrowForward/></button>
-            </Buttons>
-        </Testimonials>
-    </Container>
-  )
+    return (
+        <Container id='client'>
+            <Slide direction="left">
+                <span className="green">testimonials</span>
+                <h1>what clients say</h1>
+            </Slide>
+            <Testimonials>
+                <Slider ref={arrowRef} {...settings}>
+                    {clientDisc}
+                </Slider>
+                <Buttons>
+                    <button
+                        onClick={() => arrowRef.current.slickPrev()}
+                    ><IoIosArrowBack /></button>
+                    <button
+                        onClick={() => arrowRef.current.slickNext()}
+                    ><IoIosArrowForward /></button>
+                </Buttons>
+            </Testimonials>
+        </Container>
+    )
 }
 
 export default Clients

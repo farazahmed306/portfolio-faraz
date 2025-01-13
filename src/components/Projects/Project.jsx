@@ -2,18 +2,18 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Project = (props) => {
-    const { img, disc } = props.item;
-  return (
-    <Container className='project'>
-        <img src={img} alt="project" />
-        <div className="disc">
-            <h1>Description</h1>
-            <p>{disc}
-            <a href="/">demo</a>
-            </p>
-        </div>
-    </Container>
-  )
+    const { img, disc, pLink, pName } = props.item;
+    return (
+        <Container className='project'>
+            <img src={img} alt="project" />
+            <div className="disc">
+                <h1>{pName}</h1>
+                <p>{disc}
+                    <a href={pLink || "#"}>demo</a>
+                </p>
+            </div>
+        </Container>
+    )
 }
 
 export default Project;
