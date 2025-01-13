@@ -26,7 +26,7 @@ const Footer = () => {
             <h1>Address:</h1>
           </Slide>
           <Slide direction="left">
-            <p>89-B, AIT, Lahore</p>
+            <p>Ernst-Lemmer-Straße, Marburg, Germany</p>
           </Slide>
         </div>
         <div className="links">
@@ -38,7 +38,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+923476513429">+92 347 6513429</a>
+              <a href="tel:+491635734392">+49 1635734392</a>
             </Slide>
           </div>
           <div>
@@ -59,7 +59,7 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://github.com/farazahmed306">
                   <AiFillGithub />
                 </a>
               </span>

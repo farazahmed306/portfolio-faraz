@@ -18,28 +18,40 @@ const Services = () => {
       <Cards>
         <Slide direction="left">
           <Card
-            Icon={MdDesignServices}
-            title={"ui/ux designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            Icon={CgWebsite}
+            title={"Web Development"}
+            disc={`I specialize in building responsive, user-friendly, and high-performance websites using the latest technologies. From landing pages to complex web applications, I create tailored solutions for your needs`}
           />
         </Slide>
+
         <Slide direction="up">
           <Card
             Icon={FiCodesandbox}
-            title={"graphic designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            title={"Full Stack Development"}
+            disc={`Combining the power of the MERN stack to deliver end-to-end solutions, from backend systems to stunning front-end interfaces`}
           />
         </Slide>
         <Slide direction="right">
           <Card
-            Icon={CgWebsite}
-            title={"web designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            Icon={MdDesignServices}
+            title={"Maintenance & Support"}
+            disc={`Providing regular updates, security patches, and ongoing support to keep your website running smoothly.`}
           />
         </Slide>
+        <Slide direction="right">
+          <Card
+            Icon={MdDesignServices}
+            title={"API Integration"}
+            disc={`Creating and integrating RESTful APIs to ensure smooth communication between different systems. I focus on secure and efficient data exchange.`}
+          />
+        </Slide>        <Slide direction="left">
+          <Card
+            Icon={MdDesignServices}
+            title={"Custom Web Solutions"}
+            disc={`Developing bespoke web applications tailored to your unique requirements. Whether it's a management tool, booking system, or a dashboard, I've got you covered.`}
+          />
+        </Slide>
+
       </Cards>
     </Container>
   );
