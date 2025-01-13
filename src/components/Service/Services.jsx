@@ -1,7 +1,9 @@
 import React from "react";
-import { MdDesignServices } from "react-icons/md";
-import { FiCodesandbox } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
+import { HiOutlineServer } from "react-icons/hi";
+import { FaLaptopCode, FaShoppingCart } from "react-icons/fa";
+import { FiTool } from "react-icons/fi";
+import { RiShieldCheckFill } from "react-icons/ri";
 import styled from "styled-components";
 import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
@@ -18,40 +20,47 @@ const Services = () => {
       <Cards>
         <Slide direction="left">
           <Card
-            Icon={CgWebsite}
+            Icon={FaLaptopCode}
             title={"Web Development"}
-            disc={`I specialize in building responsive, user-friendly, and high-performance websites using the latest technologies. From landing pages to complex web applications, I create tailored solutions for your needs`}
+            disc={`Building dynamic and high-performance websites that perfect to your needs. I focus on creating responsive designs that look great and provide seamless functionality`}
           />
         </Slide>
-
-        <Slide direction="up">
+        <Slide direction="left">
           <Card
-            Icon={FiCodesandbox}
+            Icon={CgWebsite}
             title={"Full Stack Development"}
             disc={`Combining the power of the MERN stack to deliver end-to-end solutions, from backend systems to stunning front-end interfaces`}
           />
         </Slide>
         <Slide direction="right">
           <Card
-            Icon={MdDesignServices}
-            title={"Maintenance & Support"}
-            disc={`Providing regular updates, security patches, and ongoing support to keep your website running smoothly.`}
+            Icon={FaShoppingCart}
+            title={"E-commerce Development"}
+            disc={`Building fully functional e-commerce platforms with features like product management, payment gateways, and user-friendly shopping experiences.`}
           />
         </Slide>
+
         <Slide direction="right">
           <Card
-            Icon={MdDesignServices}
+            Icon={HiOutlineServer}
             title={"API Integration"}
             disc={`Creating and integrating RESTful APIs to ensure smooth communication between different systems. I focus on secure and efficient data exchange.`}
           />
-        </Slide>        <Slide direction="left">
+        </Slide>
+        <Slide direction="left">
           <Card
-            Icon={MdDesignServices}
+            Icon={FiTool}
             title={"Custom Web Solutions"}
             disc={`Developing bespoke web applications tailored to your unique requirements. Whether it's a management tool, booking system, or a dashboard, I've got you covered.`}
           />
         </Slide>
-
+        <Slide direction="left">
+          <Card
+            Icon={RiShieldCheckFill}
+            title={"Maintenance & Support"}
+            disc={`Providing regular updates, security patches, and ongoing support to keep your website running smoothly.`}
+          />
+        </Slide>
       </Cards>
     </Container>
   );
