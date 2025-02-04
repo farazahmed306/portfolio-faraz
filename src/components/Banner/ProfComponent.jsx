@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {
   AiFillFacebook,
-  AiOutlineFacebook,
-  AiOutlineInstagram,
 } from "react-icons/ai";
 import { GiEarthAmerica } from "react-icons/gi";
 import { FaLinkedinIn } from "react-icons/fa";
