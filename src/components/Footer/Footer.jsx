@@ -7,14 +7,25 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import { useState } from "react";
 
 const Footer = () => {
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userMessage, setUserMessage] = useState('');
   const scrollUp = () => {
     window.scroll({
       top: 0,
       behavior: "smooth",
     });
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("I am clicked");
+    console.log(userName, "   ", userEmail, "    ", userMessage);
+
+
+  }
   return (
     <Container id="footer">
       <Profile>
@@ -95,26 +106,42 @@ const Footer = () => {
       </Profile>
       <Form>
         <Slide direction="right">
-          <form>
+          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <div className="name">
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+              <input
+                type="text"
+                placeholder="Fullname..."
+                required
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." />
+              <input
+                type="email"
+                placeholder="Email..."
+                required
+                value={userEmail}
+                onChange={(e) => setUserEmail(e.target.value)} />
             </div>
             <div className="message">
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              <textarea
+                cols="30" rows="10"
+                placeholder="Message..."
+                required
+                value={userMessage}
+                onChange={(e) => setUserMessage(e.target.value)}></textarea>
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </Slide>
       </Form>
