@@ -21,11 +21,33 @@ const Footer = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("I am clicked");
-    console.log(userName, "   ", userEmail, "    ", userMessage);
 
+    // Construct the form data in the format Netlify expects
+    const formData = new URLSearchParams({
+      "form-name": "contact", // Must match the form's name attribute
+      "userName": userName,
+      "userEmail": userEmail,
+      "userMessage": userMessage,
+    }).toString();
 
-  }
+    // Send the form data to Netlify
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData,
+    })
+      .then(() => {
+        alert("Thank you for your message! I'll get back to you soon.");
+        // Reset the form fields
+        setUserName("");
+        setUserEmail("");
+        setUserMessage("");
+      })
+      .catch((error) => {
+        alert("Something went wrong. Please try again.");
+        console.error(error);
+      });
+  };
   return (
     <Container id="footer">
       <Profile>
@@ -77,21 +99,21 @@ const Footer = () => {
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/gfa306/">
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.facebook.com/profile.php?id=100006121628048">
                   <BsFacebook />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/gfa306/">
                   <BsSlack />
                 </a>
               </span>
@@ -106,7 +128,15 @@ const Footer = () => {
       </Profile>
       <Form>
         <Slide direction="right">
-          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            onSubmit={handleSubmit}
+          >
+            {/* Hidden input for Netlify's form handling */}
+            <input type="hidden" name="form-name" value="contact" />
             <div className="name">
               <span>
                 <CgProfile />
@@ -141,6 +171,7 @@ const Footer = () => {
                 value={userMessage}
                 onChange={(e) => setUserMessage(e.target.value)}></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Submit</button>
           </form>
         </Slide>

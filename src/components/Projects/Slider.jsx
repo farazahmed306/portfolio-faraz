@@ -8,25 +8,25 @@ let data = [
 
 
   {
-    img: "https://fastly.picsum.photos/id/2/3888/2592.jpg?hmac=H2kj1bNmSkXNECY4B4sHjQzZVa05ruYwqevOOYs4Q8A",
+    img: "https://al-burraq.com/portfolioimages/f1684844256.header.png",
     disc: "Vertex Inspector is an app that streamlines asset inspections by recording defects, generating detailed reports, and capturing photos. It enables inspectors to assign issues to team members for efficient communication and resolution",
     pLink: "https://al-burraq.com/portfolio/streamlining-asset-inspection-and-recording",
     pName: "Vertex Inspector"
   },
   {
-    img: "https://fastly.picsum.photos/id/2/3888/2592.jpg?hmac=H2kj1bNmSkXNECY4B4sHjQzZVa05ruYwqevOOYs4Q8A",
+    img: "https://taxcalculator.pk/assets/images/banner/main.webp",
     disc: "Tax Calculator is a leading tax services provider in Pakistan, offering tools to calculate taxes based on the country's budget. It also provides services like company/firm registration, income tax return filing, tax appeals, litigation, and drafting legal agreements and contracts.",
     pLink: "https://taxcalculator.pk/",
     pName: "Tax Calculator"
   },
   {
-    img: "https://fastly.picsum.photos/id/2/3888/2592.jpg?hmac=H2kj1bNmSkXNECY4B4sHjQzZVa05ruYwqevOOYs4Q8A",
+    img: "https://al-burraq.com/portfolioimages/f1690985990.header.webp",
     disc: "Lexamica is a digital platform revolutionizing legal document management with features like document organization, version control, and advanced search. Its intuitive interface enables professionals to manage documents efficiently, enhancing workflow and user experience.",
     pLink: "https://al-burraq.com/portfolio/redefining-legal-document-management",
     pName: "Lexamica"
   },
   {
-    img: "https://fastly.picsum.photos/id/2/3888/2592.jpg?hmac=H2kj1bNmSkXNECY4B4sHjQzZVa05ruYwqevOOYs4Q8A",
+    img: "https://www.al-burraq.com/portfolioimages/f1690981810.header.webp",
     disc: "GoodTerms.ai is a smart SaaS platform powered by advanced natural language processing, designed to extract accurate and relevant terms from text data. Users can effortlessly upload documents or input text to receive concise term suggestions through a seamless, user-friendly interface.",
     pLink: "https://al-burraq.com/portfolio/empower-text-analytics-with-goodterms.ai",
     pName: "GoodTerms"
@@ -106,7 +106,7 @@ const Buttons = styled.div`
   button{
     width: 2rem;
     height: 2rem;
-    background-color: rgba(255, 255, 255, 0.100);
+    background-color: rgb(80, 80, 80);
     cursor: pointer;
     color: #01be96;
     border: none;

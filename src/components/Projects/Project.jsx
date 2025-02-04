@@ -43,7 +43,7 @@ const Container = styled.div`
         background: linear-gradient(rgba(0,0,0, 0.100), rgba(0,0,0, 0.80));
         transition: all 400ms ease-in-out;
         h1{
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
     
         p{
@@ -58,6 +58,7 @@ const Container = styled.div`
 
     :hover > img{
         transform: scale(1.3);
+        filter: blur(3px);
     }
 
     :hover > .disc{
